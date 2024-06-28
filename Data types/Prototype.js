@@ -32,5 +32,5 @@ let rabbit = {
 rabbit.walk(); // Animal walk
 
 
-]
+
   
