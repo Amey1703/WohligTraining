@@ -1,0 +1,12 @@
+<div class="p-3 d-flex gap-5 m-4">
+  <% cards.forEach((card) =>{ %>  
+<div class="card" style="width: 18rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title"><%= card.title %></h5>
+      <p class="card-text"><%= card.text %></p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+<% }) %>
+</div>
