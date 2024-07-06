@@ -1,0 +1,16 @@
+{
+  "name": "@amey1703/find-factorial",
+  "version": "1.0.0",
+  "description": "Factorial of given Number",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "javascript",
+    "recursion",
+    "nodejs"
+  ],
+  "author": "amey1703",
+  "license": "ISC"
+}
