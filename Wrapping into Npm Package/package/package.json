@@ -1,0 +1,14 @@
+{
+  "name": "find-fact",
+  "version": "1.0.0",
+  "description": "Is the string WDS?",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "WDS"
+  ],
+  "author": "Web Dev Simplified",
+  "license": "ISC"
+}
