@@ -1,11 +1,13 @@
 import express from "express";
-
+import './scheduler3.js';
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+app.use(express.json());
+
+const PORT = process.env.PORT || 1234;
 
 app.get("/", (req, res) => {
-    res.json({message:"Hello World"});
+    res.send("Hello World!");
 });
 
 

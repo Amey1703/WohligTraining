@@ -1,0 +1,109 @@
+openapi: 3.0.0
+info:
+  title: Swagger API Documentation
+  version: 1.0.0
+  description: This is a test project for learning Swagger API
+paths:
+  /users:
+    get:
+      summary: Retrieve list of users
+      description: Retrive list of users from the system.
+      responses:
+        200:
+          description: A JSON array of objects
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                      description: The users ID
+                    name:
+                      type: string
+                      description: The users name
+          404:
+            description: Users Not found
+    post:
+      summary: Create a new user
+      description: Create a new user in the system.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: The users name
+                email:
+                  type: string
+                  description: The users email
+      responses:
+        201:
+          description: User created
+        400:
+          description: Bad Request
+        404:
+          description: System error
+
+  /users/{userId}:
+    parameters:
+      - name: userId
+        in: path
+        required: true
+        description: The users Id
+        schema:
+          type: integer
+    get:
+      summary: Retrieve a user
+      description: Retrive a user from the system.
+      responses:
+        200:
+          summary: Retrive user by Id
+          description: retrieve user by Id from system
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    description: The users Id
+                  name:
+                    type: string
+                    description: The users name
+        404:
+          description: User Not found
+    put:
+      summary: Update a user
+      description: Update a user in the system.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: The users name
+                email:
+                  type: string
+                  description: The users email
+      responses:
+        200:
+          description: User updated
+        404:
+          description: User Not found
+    delete:
+      summary: Delete a user
+      description: Delete a user from the system.
+      responses:
+        204:
+          description: User deleted
+        400:
+          description: User not found
